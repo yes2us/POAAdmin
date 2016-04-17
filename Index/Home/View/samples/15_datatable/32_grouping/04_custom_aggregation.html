@@ -15,7 +15,7 @@
 
 		<script type="text/javascript" charset="utf-8">
 		webix.ready(function(){
-			webix.GroupMethods.median = function(prop, data){
+			webix.GroupMethods.mean = function(prop, data){
 				if (!data.length) return 0;
 				
 				var summ = 0;
@@ -43,7 +43,7 @@
 					$group:{
 						by:"year",
 						map:{
-							votes:["votes", "median"],
+							votes:["votes", "mean"],
 							title:["year"]
 						}
 					},

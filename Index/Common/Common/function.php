@@ -84,12 +84,14 @@ function getMyCon($DSNo=1)
 		case 'eekabsc.com':
 				if($DSNo==1)
 			  {
-			  		return array(	'DB_TYPE' => 'sqlsrv',
-					'DB_CHARSET'=> 'utf8', // 字符集
-					'DB_Host' => 'Localhost\SQL2008',
-					'DB_User' => 'sa',
-					'DB_PWD'  => 'Rickywang9',
-					'DB_NAME' => 'eekapoa');
+		  		return array(	'DB_TYPE' => 'mysql',
+		  		'DB_PORT' =>3306,
+				'DB_CHARSET'=> 'utf8', // 字符集
+				'DB_Host' => '127.0.0.1', //mac下不能使用localhost!
+				'DB_User' => 'sa',
+				'DB_PWD'  => 'Rickywang9',
+				'DB_NAME' => 'tocdist',
+				'DB_DEBUG'  =>  TRUE);
 			  }
 			  else
 			  {

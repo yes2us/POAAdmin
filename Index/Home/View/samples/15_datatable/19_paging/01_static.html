@@ -13,7 +13,7 @@
 		<div class='sample_comment'>Loading from DB (sqllite + php).</div>
 		<div class='sample_comment'>Use the page selector below to choose the desired page.</div>
 		</br>
-		<div id="testA" style='height:100px; width:300px;'></div>
+		<div id="testA" style='width:300px;'></div>
 		<div id="paging_here"></div>
 		
 		<script type="text/javascript" charset="utf-8">
@@ -29,11 +29,14 @@
 					{ id:"year",	header:"Released" , width:80,	sort:"int"},
 					{ id:"votes",	header:"Votes", 	width:100,	sort:"int"}
 				],
-				select:"cell",
+				select:"row",
 				autowidth:true,
+				yCount:10, scrollY:false,
+				navigation:"true",
+
 				pager:{
 					container:"paging_here",
-					size:100,
+					size:10,
 					group:5
 				},
 				data:big_film_set

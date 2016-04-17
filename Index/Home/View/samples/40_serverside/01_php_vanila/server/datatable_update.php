@@ -17,17 +17,17 @@
 	if ($operation == "insert"){
 		//adding new record
 		$db->query("INSERT INTO films(rank, title, year, votes) VALUES('$rank', '$title', '$year', '$votes')");
-		echo '{ id:"'.$db->lastInsertRowID().'", mytext:"saved" }';
+		echo '{ "id":"'.$db->lastInsertRowID().'", "mytext":"saved" }';
 
 	} else if ($operation == "update"){
 		//updating record
 		$db->query("UPDATE films SET rank='$rank', title='$title', year='$year', votes='$votes' WHERE id='$id'");
-		echo '{ mytext:"saved" }';
+		echo '{ "mytext":"saved" }';
 
 	} else if ($operation == "delete"){
 		//deleting record
 		$db->query("DELETE FROM films WHERE id='$id'");
-		echo '';
+		echo '{}';
 
 	} else 
 		echo "Not supported operation";

@@ -29,11 +29,11 @@
             webix.ui({
                 container:"listA",
                 weekHeader:true,
-                date:new Date(2014,0,16),
+                date:new Date(2015,0,16),
                 view:"calendar",
                 events:webix.Date.isHoliday,
                 blockDates:function(date){
-                    if(date.getFullYear()<=2013)
+                    if(date.getFullYear()<2015)
                         return true;
                 }
             });
@@ -42,10 +42,10 @@
                 container:"listB",
                 weekHeader:true,
                 weekNumber:true,
-                date:new Date(2012,3,16),
+                date:new Date(2015,3,16),
                 view:"calendar",
-                minDate:'2012-04-05',
-                maxDate:new Date(2012, 4, 20),
+                minDate:'2015-04-05',
+                maxDate:new Date(2015, 4, 20),
                 events:webix.Date.isHoliday,
                 width:290
             });

@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<div class='header_comment'>Dynamic paging. Loading from DB (sqllite + php)</div>
-		<div id="testA" style='height:300px'></div>
+		<div id="testA"></div>
 		<div id="paging_here"></div>
 		
 		<script type="text/javascript" charset="utf-8">
@@ -25,14 +25,15 @@
 					{ id:"size",	header:"Size" , 		width:80  },
 					{ id:"architecture",	header:"PC", 	width:60  }
 				],
-				select:"cell",
-				autowidth:true,
+				select:"row",
+				navigation:true,
+				autowidth:true, autoheight:true,
 
-				datafetch:60,
-				loadahead:45,
+				datafetch:40,
+				loadahead:15,
 				pager:{
 					container:"paging_here",
-					size:30,
+					size:10,
 					group:5
 				},
 				url:"data/data_dyn.php"
